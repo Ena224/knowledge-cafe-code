@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-
-const Blog = ({blog}) => {
-    const{title,cover,author,author_img,posted_date,reading_time,hashtags}=blog;
+import { FaBookmark } from 'react-icons/fa';
+const Blog = ({blog, handleAddToBookmark,handleMarkAsRead}) => {
+    const{id,title,cover,author,author_img,posted_date,reading_time,hashtags}=blog;
     console.log(blog);
     return (
-        <div>
-            <img src={cover} alt={`Cover picture of the title ${title}`}></img>
-            <div className='flex justify-between '>
+        <div className='mb-20 space-y-4'>
+            <img className='w-full mb-8 rounded-lg' src={cover} alt={`Cover picture of the title ${title}`}></img>
+            <div className='flex justify-between mb-4 '>
             <div className='flex'>
                   <img className='w-14 rounded-full' src={author_img} alt="" />
                   <div className='ml-6'>
@@ -14,21 +14,32 @@ const Blog = ({blog}) => {
                     <p>{posted_date}</p>
                 </div> 
             </div>      
-                <div>
+                <div >
                       <span>{reading_time} min read</span>
+                      <button
+                      onClick={()=>handleAddToBookmark(blog)}
+                      
+                      className='ml-2 text-2 text-orange-600'><FaBookmark></FaBookmark> Bookmark</button>
                   </div>
             </div>
             <h2 className='text-4xl'>{title}</h2>
             <p>
                 {
                     // we are mapping hashtags cz it's an array
-                    // hashtags.map(hash => <span> <a href="">#{hash}</a> </span>)
+                    //map has 3 elements
+                    hashtags.map((hash,idx) => <span key={idx}> <a href="">{hash}</a> </span>)
                 }
             </p>
+            <button className='text-purple-800 font-bold underline' 
+            onClick={()=>handleMarkAsRead(id,reading_time)}
+            
+            >Mark as Read</button>
         </div>
     );
 };
 Blog.propTypes ={
-    blog:PropTypes.object.isRequired
+    blog:PropTypes.object.isRequired,
+    handleAddToBookmark : PropTypes.func,
+    handleMarkAsRead :PropTypes.func
 }
 export default Blog;

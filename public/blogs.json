@@ -8,7 +8,7 @@
         "author_img": "https://randomuser.me/api/portraits/men/51.jpg",
         "posted_date": "2024-10-05",
         "reading_time": 8,
-        "hashtags": "#JavaScript #Coding #Programming"
+        "hashtags": ["#JavaScript #Coding #Programming"]
     },
     {
         "id": 102,
@@ -18,26 +18,26 @@
         "author_img": "https://randomuser.me/api/portraits/women/52.jpg",
         "posted_date": "2024-10-10",
         "reading_time": 7,
-        "hashtags": "#DataStructures #JavaScript #Programming"
+        "hashtags": ["#DataStructures #JavaScript #Programming"]
     },
     {
-        "id": 104,
+        "id": 103,
         "cover": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
         "title": "Python for Beginners: Your First Script",
         "author": "Michael Brown",
         "author_img": "https://randomuser.me/api/portraits/men/53.jpg",
         "posted_date": "2024-10-15",
         "reading_time": 10,
-        "hashtags": "#Python #Coding #Programming"
+        "hashtags": ["#Python #Coding #Programming"]
     },
     {
-        "id": 105,
+        "id": 104,
         "cover": "https://images.unsplash.com/photo-1542744095-291d1f67b221?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400",
         "title": "Creating Mobile-Friendly Websites",
         "author": "Sarah Davis",
         "author_img": "https://randomuser.me/api/portraits/women/54.jpg",
         "posted_date": "2024-10-20",
         "reading_time": 6,
-        "hashtags": "#ResponsiveDesign #WebDevelopment #UIUX"
+        "hashtags": ["#ResponsiveDesign #WebDevelopment #UIUX"]
     }
 ]
